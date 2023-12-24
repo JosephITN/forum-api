@@ -42,6 +42,7 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
+        cache-dependency-path: forum-api/package-lock.json
     - name: npm install migrate and test
       run: |
         npm install
