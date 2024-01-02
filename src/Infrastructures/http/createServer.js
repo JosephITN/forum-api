@@ -48,26 +48,28 @@ const createServer = async (container) => {
     }),
   });
 
+  const options = { container };
+
   await server.register([
     {
       plugin: authentications,
-      options: { container },
+      options,
     },
     {
       plugin: users,
-      options: { container },
+      options,
     },
     {
       plugin: threads,
-      options: { container },
+      options,
     },
     {
       plugin: comments,
-      options: { container },
+      options,
     },
     {
       plugin: replies,
-      options: { container },
+      options,
     },
   ]);
 
